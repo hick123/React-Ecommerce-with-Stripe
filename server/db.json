@@ -6,7 +6,7 @@
       "category": "tv",
       "price": 200,
       "brand": "hisense",
-      "imgUrl": "http://localhost:4000/Hisense-32.jpg"
+      "imgUrl": "Hisense-32.jpg"
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "brand": "hisense",
       "category": "tv",
       "price": 450,
-      "imgUrl": "http://localhost:4000/Hisense 50A7100 Smart Ultra HD.jpg",
+      "imgUrl": "Hisense 50A7100 Smart Ultra HD.jpg",
       "description": "HISENSE 4K ULTRA HD SMART TV delivers stunning picture qualities that just might make you the most popular host on the apartment. Watch premium content from NETFLIX, YOUTUBE as well as other in-built apps. "
     },
     {
@@ -23,7 +23,7 @@
       "brand": "hisense",
       "category": "tv",
       "price": 450,
-      "imgUrl": "http://localhost:4000/Hisense 55” 4K UHD SMART TV.jpg"
+      "imgUrl": "Hisense 55” 4K UHD SMART TV.jpg"
     },
     {
       "id": 4,
@@ -31,7 +31,7 @@
       "brand": "hisense",
       "category": "tv",
       "price": 320,
-      "imgUrl": "http://localhost:4000/Hisense 43 Frameless Smart LED FHD TV - Black.jpg"
+      "imgUrl": "Hisense 43 Frameless Smart LED FHD TV - Black.jpg"
     },
     {
       "id": 5,
@@ -39,7 +39,7 @@
       "brand": "hisense",
       "category": "tv",
       "price": 1450,
-      "imgUrl": "http://localhost:4000/Hisense 65 Smart Android 4k Frameless 65A72KEN.jpg",
+      "imgUrl": "Hisense 65 Smart Android 4k Frameless 65A72KEN.jpg",
       "description": "Hisense Smart Android TV you are showed an integrated world where every part of the image is sharp and clear."
     },
     {
@@ -48,7 +48,7 @@
       "category": "tv",
       "brand": "samsung",
       "price": 369,
-      "imgUrl": "http://localhost:4000/Samsung 43T5300 43” SMART FULL HD LED TV.jpg"
+      "imgUrl": "Samsung 43T5300 43” SMART FULL HD LED TV.jpg"
     },
     {
       "id": 7,
@@ -56,7 +56,7 @@
       "category": "tv",
       "brand": "samsung",
       "price": 61543,
-      "imgUrl": "http://localhost:4000/Samsung UA49RU7300 49 LED TV - Curved UHD, Smart, Digital.jpg"
+      "imgUrl": "Samsung UA49RU7300 49 LED TV - Curved UHD, Smart, Digital.jpg"
     },
     {
       "id": 8,
@@ -64,7 +64,7 @@
       "category": "tv",
       "brand": "samsung",
       "price": 1099,
-      "imgUrl": "http://localhost:4000/Samsung QA55Q60RAKXKE - 55'', Qpicture, Qsmart, Qstyle QLED TV.jpg"
+      "imgUrl": "Samsung QA55Q60RAKXKE - 55'', Qpicture, Qsmart, Qstyle QLED TV.jpg"
     },
     {
       "id": 9,
@@ -72,7 +72,7 @@
       "category": "tv",
       "brand": "sony",
       "price": 190,
-      "imgUrl": "http://localhost:4000/Sony 32 32R300E Digital LED HD TV - Black.jpg"
+      "imgUrl": "Sony 32 32R300E Digital LED HD TV - Black.jpg"
     },
     {
       "id": 10,
@@ -80,7 +80,7 @@
       "category": "tv",
       "brand": "sony",
       "price": 750,
-      "imgUrl": "http://localhost:4000/Sony 75 75X8000H HDR Smart Android LED Ultra HD 4K TV - Black.jpg"
+      "imgUrl": "Sony 75 75X8000H HDR Smart Android LED Ultra HD 4K TV - Black.jpg"
     },
     {
       "id": 11,
@@ -88,7 +88,7 @@
       "category": "tv",
       "brand": "vision",
       "price": 200,
-      "imgUrl": "http://localhost:4000/Vision Plus VP8832DB - 32 Digital HD LED TV - Black + FREE WALL MOUNT.jpg"
+      "imgUrl": "Vision Plus VP8832DB - 32 Digital HD LED TV - Black + FREE WALL MOUNT.jpg"
     },
     {
       "id": 12,
@@ -96,7 +96,7 @@
       "category": "tv",
       "brand": "vision",
       "price": 350,
-      "imgUrl": "http://localhost:4000/Vision Plus VP8850K 50 Frameless 4K Bluetooth Android TV - Black + FREE Wall Mount.jpg"
+      "imgUrl": "Vision Plus VP8850K 50 Frameless 4K Bluetooth Android TV - Black + FREE Wall Mount.jpg"
     },
     {
       "id": 13,
@@ -104,7 +104,7 @@
       "category": "tv",
       "brand": "Vitron",
       "price": 70,
-      "imgUrl": "http://localhost:4000/Vitron 22” LED DIGITAL TV USB AND HDMI PORT.jpg"
+      "imgUrl": "Vitron 22” LED DIGITAL TV USB AND HDMI PORT.jpg"
     },
     {
       "id": 14,
@@ -112,7 +112,7 @@
       "category": "tv",
       "brand": "Vitron",
       "price": 240,
-      "imgUrl": "http://localhost:4000/Vitron 4368FS-43 SMART Android TV FULL HD-Netfix,Youtube Tv.jpg"
+      "imgUrl": "Vitron 4368FS-43 SMART Android TV FULL HD-Netfix,Youtube Tv.jpg"
     },
     {
       "id": 15,
@@ -120,7 +120,7 @@
       "category": "tv",
       "price": 200,
       "brand": "Syinix",
-      "imgUrl": "http://localhost:4000/Syinix.jpg"
+      "imgUrl": "Syinix.jpg"
     }
   ]
 }

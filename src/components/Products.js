@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { useSelector } from "react-redux";
 import { Row, Col } from "react-bootstrap";
 import ContentLoader from "react-content-loader";
+import config from "../config/config.json";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
@@ -17,7 +18,7 @@ export default function Products() {
   const fetchProducts = () => {
     setLoading(true);
     superagent
-      .get(`http://localhost:4000/db/products${getBrand}`)
+      .get(`${config.API_URL}/db/products${getBrand}`)
       .then((res) => {
         setLoading(false);
         setProducts(res.body);
@@ -78,7 +79,7 @@ const styles = styled.div`
   border-radius: 3px;
   padding: 18px 12px;
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.12);
-  height: 100%;
+  /* height: 100%; */
 
   .out-of-stock {
     margin: auto;

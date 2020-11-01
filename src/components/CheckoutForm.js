@@ -8,6 +8,7 @@ import SuccessPayment from "./SuccessPayment";
 import { currencyFormatter } from "../utils/curencyFormatter";
 import superagent from "superagent";
 import { clearCartAction } from "../store/cart/cart.action";
+import config from "../config/config.json";
 
 export default function CheckoutForm() {
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ export default function CheckoutForm() {
 
   useEffect(() => {
     superagent
-      .post(`http://localhost:4000/create-payment-intent`)
+      .post(`${config.API_URL}/create-payment-intent`)
       .send({
         payment_method_types: ["card"],
         amount: total.amount,
@@ -89,7 +90,7 @@ export default function CheckoutForm() {
     return (
       <StyledRenderForm>
         <Alert variant="success">
-          <Alert.Heading>For demo use</Alert.Heading>
+          <Alert.Heading>For demo purposes</Alert.Heading>
           <p>
             Card: 4242 4242 4242 4242 <br /> Exp: 01/21 <br />
             CVC: 123 <br />

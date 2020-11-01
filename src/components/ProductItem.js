@@ -9,6 +9,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import addToCart from "../assets/twotone-add-shopping-cart.svg";
 import { currencyFormatter } from "../utils/curencyFormatter";
+import config from "../config/config.json";
 
 export default function ProductItem({ product }) {
   const dispatch = useDispatch();
@@ -22,7 +23,7 @@ export default function ProductItem({ product }) {
     <StyledProductItem>
       <div className="product-item">
         <div className="product-image">
-          <img src={product.imgUrl} alt={product.name} />
+          <img src={`${config.API_URL}/${product.imgUrl}`} alt={product.name} />
         </div>
         <div className="title">{product.name}</div>
 
