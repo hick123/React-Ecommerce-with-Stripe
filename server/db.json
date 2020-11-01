@@ -1,0 +1,126 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Hisense 32” Smart Android TV - HD TV- Black ",
+      "category": "tv",
+      "price": 200,
+      "brand": "hisense",
+      "imgUrl": "http://localhost:4000/Hisense-32.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Hisense 50” smart tv full Hd android tv",
+      "brand": "hisense",
+      "category": "tv",
+      "price": 450,
+      "imgUrl": "http://localhost:4000/Hisense 50A7100 Smart Ultra HD.jpg",
+      "description": "HISENSE 4K ULTRA HD SMART TV delivers stunning picture qualities that just might make you the most popular host on the apartment. Watch premium content from NETFLIX, YOUTUBE as well as other in-built apps. "
+    },
+    {
+      "id": 3,
+      "name": "Hisense 55” 4K UHD SMART TV",
+      "brand": "hisense",
+      "category": "tv",
+      "price": 450,
+      "imgUrl": "http://localhost:4000/Hisense 55” 4K UHD SMART TV.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Hisense 43 Frameless Smart LED FHD TV - Black",
+      "brand": "hisense",
+      "category": "tv",
+      "price": 320,
+      "imgUrl": "http://localhost:4000/Hisense 43 Frameless Smart LED FHD TV - Black.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Hisense 65 Smart Android 4k Frameless 65A72KEN",
+      "brand": "hisense",
+      "category": "tv",
+      "price": 1450,
+      "imgUrl": "http://localhost:4000/Hisense 65 Smart Android 4k Frameless 65A72KEN.jpg",
+      "description": "Hisense Smart Android TV you are showed an integrated world where every part of the image is sharp and clear."
+    },
+    {
+      "id": 6,
+      "name": "Samsung 43T5300 43” SMART FULL HD LED TV - Android",
+      "category": "tv",
+      "brand": "samsung",
+      "price": 369,
+      "imgUrl": "http://localhost:4000/Samsung 43T5300 43” SMART FULL HD LED TV.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Samsung UA49RU7300 49 LED TV - Curved UHD, Smart, Digital",
+      "category": "tv",
+      "brand": "samsung",
+      "price": 61543,
+      "imgUrl": "http://localhost:4000/Samsung UA49RU7300 49 LED TV - Curved UHD, Smart, Digital.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Samsung QA55Q60RAKXKE - 55'', Qpicture, Qsmart, Qstyle QLED TV ",
+      "category": "tv",
+      "brand": "samsung",
+      "price": 1099,
+      "imgUrl": "http://localhost:4000/Samsung QA55Q60RAKXKE - 55'', Qpicture, Qsmart, Qstyle QLED TV.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Sony 32 32R300E Digital LED HD TV - Black",
+      "category": "tv",
+      "brand": "sony",
+      "price": 190,
+      "imgUrl": "http://localhost:4000/Sony 32 32R300E Digital LED HD TV - Black.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Sony 75 75X80H HDR Smart Android LED Ultra HD 4K TV - Black",
+      "category": "tv",
+      "brand": "sony",
+      "price": 750,
+      "imgUrl": "http://localhost:4000/Sony 75 75X8000H HDR Smart Android LED Ultra HD 4K TV - Black.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Vision Plus VP8832DB - 32 Digital HD LED TV - Black + FREE WALL MOUNT",
+      "category": "tv",
+      "brand": "vision",
+      "price": 200,
+      "imgUrl": "http://localhost:4000/Vision Plus VP8832DB - 32 Digital HD LED TV - Black + FREE WALL MOUNT.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Vision Plus VP8850K 50 Frameless 4K Bluetooth Android TV - Black + FREE Wall Mount",
+      "category": "tv",
+      "brand": "vision",
+      "price": 350,
+      "imgUrl": "http://localhost:4000/Vision Plus VP8850K 50 Frameless 4K Bluetooth Android TV - Black + FREE Wall Mount.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Vitron 22 LED DIGITAL - USB and HDMI port",
+      "category": "tv",
+      "brand": "Vitron",
+      "price": 70,
+      "imgUrl": "http://localhost:4000/Vitron 22” LED DIGITAL TV USB AND HDMI PORT.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Vitron 4368FS-43'' SMART Android TV FULL HD-Netfix,Youtube Tv",
+      "category": "tv",
+      "brand": "Vitron",
+      "price": 240,
+      "imgUrl": "http://localhost:4000/Vitron 4368FS-43 SMART Android TV FULL HD-Netfix,Youtube Tv.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Syinix 32 LED- Plus USB and HDMI port",
+      "category": "tv",
+      "price": 200,
+      "brand": "Syinix",
+      "imgUrl": "http://localhost:4000/Syinix.jpg"
+    }
+  ]
+}
