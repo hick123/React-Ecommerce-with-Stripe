@@ -95,6 +95,8 @@ export default function CheckoutForm() {
             Card: 4242 4242 4242 4242 <br /> Exp: 01/21 <br />
             CVC: 123 <br />
             ZIP: 99501
+            <hr />
+            Or use 3D Secure card <br /> Card: 4000 0000 0000 3220
           </p>
         </Alert>
         <h4>Amount to be paid : {currencyFormatter.format(total.amount)}</h4>
