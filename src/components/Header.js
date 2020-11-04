@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Navbar, Nav, Badge } from "react-bootstrap";
+import { Navbar, Nav, Badge, Dropdown } from "react-bootstrap";
 import { useHistory, NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { updateTotalAction } from "../store/cart/cart.action";
@@ -39,24 +39,47 @@ export default function Header() {
                   Shop
                 </NavLink>
               </li>
+
+              <li>
+                <NavLink to="/payments" exact activeClassName="activeLink">
+                  Payments
+                </NavLink>
+              </li>
             </ul>
           </Nav>
 
-          <NavLink to="/cart" exact activeClassName="activeLink">
-            <div className="cart-link">
-              <div className="cart-basket">
-                {cart_items.length < 1 ? (
-                  <HiOutlineShoppingCart className="cart-icon" />
-                ) : (
-                  <HiShoppingCart className="cart-icon" />
-                )}
-                <Badge variant="info" className="cart-count" pill>
-                  {total.count}
-                </Badge>
+          <div className="menu-right">
+            <Dropdown className="dropdown">
+              <Dropdown.Toggle variant="light" id="dropdown-basic">
+                Dashboard
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item>
+                  <NavLink to="/payments" exact activeClassName="activeLink">
+                    Payments
+                  </NavLink>
+                </Dropdown.Item>
+                <Dropdown.Item>Orders</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+
+            <NavLink to="/cart" exact activeClassName="activeLink">
+              <div className="cart-link">
+                <div className="cart-basket">
+                  {cart_items.length < 1 ? (
+                    <HiOutlineShoppingCart className="cart-icon" />
+                  ) : (
+                    <HiShoppingCart className="cart-icon" />
+                  )}
+                  <Badge variant="info" className="cart-count" pill>
+                    {total.count}
+                  </Badge>
+                </div>
+                <p>Cart</p>
               </div>
-              <p>Cart</p>
-            </div>
-          </NavLink>
+            </NavLink>
+          </div>
         </Navbar.Collapse>
       </Navbar>
     </HeaderWrapper>
@@ -110,6 +133,14 @@ const styles = styled.div`
   }
   li:hover {
     color: #17a2b8;
+  }
+
+  .menu-right {
+    display: flex;
+    align-items: center;
+  }
+  .dropdown {
+    margin-right: 10px;
   }
   .cart-link {
     display: flex;

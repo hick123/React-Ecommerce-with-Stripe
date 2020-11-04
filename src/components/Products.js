@@ -23,7 +23,10 @@ export default function Products() {
         setLoading(false);
         setProducts(res.body);
       })
-      .catch(console.error);
+      .catch((err) => {
+        setLoading(false);
+        console.log(err);
+      });
   };
 
   useEffect(() => {

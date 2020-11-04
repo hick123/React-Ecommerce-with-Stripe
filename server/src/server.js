@@ -16,17 +16,21 @@ app.use(express.static("uploads"));
 app.use(bodyParser.json());
 
 app.use("/db", jsonServer.router("./db.json"));
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
 
 app.get("/public-key", (req, res) => {
   res.send({ publishableKey: process.env.STRIPE_PUBLISHABLE_KEY });
+});
+
+app.get("/payments", async (req, res) => {
+  try {
+    const charges = await stripe.charges.list({
+      limit: 30,
+    });
+    // console.log(charges);
+    res.json(charges);
+  } catch (err) {
+    res.json(err);
+  }
 });
 
 app.post("/create-payment-intent", async (req, res) => {

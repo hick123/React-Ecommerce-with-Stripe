@@ -54,6 +54,17 @@ export default function CheckoutForm() {
       setProcessing(false);
       console.log("[error]", payload.error);
     } else {
+      //saving order to the database
+      // superagent
+      //   .post(`${config.API_URL_LOCAL}/db/orders`)
+      //   .send({
+      //     name: ev.target.name.value,
+      //     amount: total.amount,
+      //   })
+      //   .catch((err) => {
+      //     console.log(err);
+      //   });
+
       setError(null);
       setSucceeded(true);
       setProcessing(false);

@@ -9,6 +9,7 @@ import Shop from "./pages/Shop";
 import Cart from "./pages/Cart";
 import styled from "styled-components";
 import Checkout from "./pages/Checkout";
+import Payment from "./pages/Payments";
 
 function App() {
   const MainWrapper = styles;
@@ -24,6 +25,9 @@ function App() {
             </Route>
             <Route path="/checkout">
               <Checkout />
+            </Route>
+            <Route path="/payments">
+              <Payment />
             </Route>
             <Route path="/">
               <Shop />
