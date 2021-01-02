@@ -1,29 +1,29 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   removeProductAction,
-  updateTotalAction,
-} from "../store/cart/cart.action";
-import styled from "styled-components";
-import {
   decreaseProductCountAction,
   increaseProductCountAction,
 } from "../store/cart/cart.action";
+import styled from "styled-components";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { useHistory } from "react-router-dom";
 
 import CartSummary from "../components/CartSummary";
+
 export default function Cart() {
   const dispatch = useDispatch();
   let history = useHistory();
 
   const cart_items = useSelector((state) => state.cartState.cart_items);
 
-  useEffect(() => {
-    // refCartItems.current.w;
-    dispatch(updateTotalAction());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [cart_items]);
+  const handleDecrease = (cart_item) => {
+    dispatch(decreaseProductCountAction(cart_item));
+  };
+
+  const handleIncrease = (cart_item) => {
+    dispatch(increaseProductCountAction(cart_item));
+  };
 
   const CartWrapper = styles;
 
@@ -36,7 +36,6 @@ export default function Cart() {
             <HiOutlineShoppingCart className="empty-cart-icon" />
           </div>
           <h3>Your cart is empty</h3>
-
           <div
             className="btn btn-info checkout-btn"
             onClick={() => history.push("/shop")}
@@ -80,10 +79,7 @@ export default function Cart() {
                         <div className="change-quantity">
                           <div
                             className="btn btn-info quantity-icon-btn"
-                            onClick={() =>
-                              dispatch(decreaseProductCountAction(cart_item))
-                            }
-                            className="quantity-icon-btn"
+                            onClick={() => handleDecrease(cart_item)}
                           >
                             -
                           </div>
@@ -94,9 +90,7 @@ export default function Cart() {
 
                           <div
                             className="btn btn-info quantity-icon-btn"
-                            onClick={() =>
-                              dispatch(increaseProductCountAction(cart_item))
-                            }
+                            onClick={() => handleIncrease(cart_item)}
                           >
                             +
                           </div>
