@@ -46,7 +46,7 @@ const styles = styled.div`
   }
   .activeBrand {
     color: white;
-    background-color: #17a2b8;
+    background-color: #ff5c5c;
   }
 
   /* height: 100%;   */

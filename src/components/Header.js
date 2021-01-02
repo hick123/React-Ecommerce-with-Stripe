@@ -54,7 +54,7 @@ export default function Header() {
                   ) : (
                     <HiShoppingCart className="cart-icon" />
                   )}
-                  <div className="badge bg-info cart-count" pill>
+                  <div className="badge cart-count" pill>
                     {total.count}
                   </div>
                 </div>
@@ -77,7 +77,7 @@ const styles = styled.div`
   z-index: 999;
 
   .activeLink {
-    color: #17a2b8;
+    color: #ff5c5c;
   }
   a {
     color: #000;
@@ -148,7 +148,7 @@ const styles = styled.div`
   }
 
   .cart-link:hover {
-    color: #17a2b8;
+    color: #ff5c5c;
   }
   .cart-link p {
     margin: auto 2px;
@@ -171,6 +171,7 @@ const styles = styled.div`
     font-size: 11px;
     font-weight: 700;
     left: 43%;
+    background-color: #ff5c5c;
     /* padding: 0; */
     margin: 0;
   }

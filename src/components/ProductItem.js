@@ -44,28 +44,18 @@ export default function ProductItem({ product }) {
 
         {checkIfExist ? (
           <div className="change-quantity">
-            <div
-              onClick={handleDecrease}
-              className="btn btn-info quantity-icon-btn"
-            >
+            <div onClick={handleDecrease} className="btn quantity-icon-btn">
               -
             </div>
 
             <span>{checkIfExist?.quantity}</span>
 
-            <div
-              className="btn btn-info quantity-icon-btn"
-              onClick={handleIncrease}
-            >
+            <div className="btn quantity-icon-btn" onClick={handleIncrease}>
               +
             </div>
           </div>
         ) : (
-          <div
-            onClick={handleAddToCart}
-            block
-            className="btn btn-info add-to-cart"
-          >
+          <div onClick={handleAddToCart} block className="btn add-to-cart">
             <img src={addToCart} alt="" />
             add to cart
           </div>
@@ -113,6 +103,8 @@ const styles = styled.div`
     font-weight: 600;
     display: flex;
     justify-content: space-around;
+    background-color: #ff5c5c;
+    color: #fff;
   }
   .add-to-cart img {
     height: 14px;
@@ -123,6 +115,8 @@ const styles = styled.div`
   }
   .quantity-icon-btn {
     font-size: 13px;
+    background-color: #ff5c5c;
+    color: #fff;
     /* font-weight: 800; */
   }
   .quantity-icon-btn img {

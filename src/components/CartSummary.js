@@ -36,7 +36,7 @@ export default function CartSummary() {
 
       <div class="d-grid gap-2">
         <div
-          className="btn btn-info checkout-btn"
+          className="btn checkout-btn"
           onClick={() => history.push("/checkout")}
         >
           Checkout
@@ -76,6 +76,8 @@ const styles = styled.div`
   }
   .checkout-btn {
     margin-top: 10px;
+    background-color: #ff5c5c;
+    color: #fff;
   }
   .checkout-btn:hover {
     background-color: #7cccd8ad;

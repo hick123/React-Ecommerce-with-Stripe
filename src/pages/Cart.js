@@ -37,7 +37,7 @@ export default function Cart() {
           </div>
           <h3>Your cart is empty</h3>
           <div
-            className="btn btn-info checkout-btn"
+            className="btn checkout-btn"
             onClick={() => history.push("/shop")}
           >
             Shop
@@ -78,7 +78,7 @@ export default function Cart() {
                       <td className="product-count">
                         <div className="change-quantity">
                           <div
-                            className="btn btn-info quantity-icon-btn"
+                            className="btn quantity-icon-btn"
                             onClick={() => handleDecrease(cart_item)}
                           >
                             -
@@ -89,7 +89,7 @@ export default function Cart() {
                           </span>
 
                           <div
-                            className="btn btn-info quantity-icon-btn"
+                            className="btn quantity-icon-btn"
                             onClick={() => handleIncrease(cart_item)}
                           >
                             +
@@ -138,6 +138,8 @@ const styles = styled.div`
     /* height: 60vh; */
     display: flex;
     flex-direction: column;
+    background-color: #ff5c5c;
+    color: #fff;
     justify-content: center;
     align-items: center;
   }
@@ -220,6 +222,11 @@ const styles = styled.div`
   }
   .product-qty {
     padding: 10px;
+  }
+
+  .quantity-icon-btn {
+    background-color: #ff5c5c;
+    color: #fff;
   }
 
   .total {
