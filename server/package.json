@@ -14,10 +14,12 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "json-server": "^0.16.2",
+    "lodash-id": "^0.14.0",
+    "lowdb": "^1.0.0",
+    "nanoid": "^3.1.16",
     "stripe": "^8.119.0"
   },
   "engines": {
     "node": "12.13.0"
   }
-
 }
