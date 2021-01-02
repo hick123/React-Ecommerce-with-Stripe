@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Navbar, Nav, Badge, Dropdown } from "react-bootstrap";
 import { useHistory, NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { updateTotalAction } from "../store/cart/cart.action";
@@ -18,52 +17,35 @@ export default function Header() {
     dispatch(updateTotalAction());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cart_items]);
+
   const HeaderWrapper = styles;
   return (
     <HeaderWrapper>
-      <Navbar className="navbar">
-        <Navbar.Brand>
-          <img
-            src={logo}
-            alt=""
-            className="logo"
-            onClick={() => history.push("/")}
-          />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="nav mr-auto">
-            <ul>
-              <li>
-                <NavLink to="/" exact activeClassName="activeLink">
-                  Shop
-                </NavLink>
-              </li>
+      <div className="container">
+        <nav className="navbar">
+          <div className="navbar-brand">
+            <img
+              src={logo}
+              alt=""
+              className="logo"
+              onClick={() => history.push("/")}
+            />
+          </div>
 
-              <li>
-                <NavLink to="/payments" exact activeClassName="activeLink">
-                  Payments
-                </NavLink>
-              </li>
-            </ul>
-          </Nav>
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <NavLink to="/" exact activeClassName="activeLink">
+                Shop
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/payments" exact activeClassName="activeLink">
+                Test Payments
+              </NavLink>
+            </li>
+          </ul>
 
           <div className="menu-right">
-            <Dropdown className="dropdown">
-              <Dropdown.Toggle variant="light" id="dropdown-basic">
-                Dashboard
-              </Dropdown.Toggle>
-
-              <Dropdown.Menu>
-                <Dropdown.Item>
-                  <NavLink to="/payments" exact activeClassName="activeLink">
-                    Payments
-                  </NavLink>
-                </Dropdown.Item>
-                <Dropdown.Item>Orders</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-
             <NavLink to="/cart" exact activeClassName="activeLink">
               <div className="cart-link">
                 <div className="cart-basket">
@@ -72,16 +54,16 @@ export default function Header() {
                   ) : (
                     <HiShoppingCart className="cart-icon" />
                   )}
-                  <Badge variant="info" className="cart-count" pill>
+                  <div className="badge bg-info cart-count" pill>
                     {total.count}
-                  </Badge>
+                  </div>
                 </div>
                 <p>Cart</p>
               </div>
             </NavLink>
           </div>
-        </Navbar.Collapse>
-      </Navbar>
+        </nav>
+      </div>
     </HeaderWrapper>
   );
 }
@@ -103,16 +85,31 @@ const styles = styled.div`
   }
 
   .logo {
-    height: 30px;
+    height: 26px;
+    cursor: pointer;
   }
 
   .navbar {
     max-width: 998px;
     margin: 0 auto;
     background-color: #fff;
-    /* height: 100%; */
+    padding: 5px;
   }
-  .nav {
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    margin: 0 5px;
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+  }
+  /* .nav {
     display: flex;
     align-items: center;
     padding: 0;
@@ -133,8 +130,10 @@ const styles = styled.div`
   }
   li:hover {
     color: #17a2b8;
-  }
-
+  } */
+  /* .navbar-nav {
+    display: flex;
+  } */
   .menu-right {
     display: flex;
     align-items: center;

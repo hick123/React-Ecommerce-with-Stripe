@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "react-bootstrap";
 import styled from "styled-components";
 import {
   addProductAction,
@@ -19,6 +18,18 @@ export default function ProductItem({ product }) {
 
   const StyledProductItem = styles;
 
+  const handleAddToCart = () => {
+    dispatch(addProductAction(product));
+  };
+
+  const handleIncrease = () => {
+    dispatch(increaseProductCountAction(product));
+  };
+
+  const handleDecrease = () => {
+    dispatch(decreaseProductCountAction(product));
+  };
+
   return (
     <StyledProductItem>
       <div className="product-item">
@@ -33,34 +44,31 @@ export default function ProductItem({ product }) {
 
         {checkIfExist ? (
           <div className="change-quantity">
-            <Button
-              variant="info"
-              onClick={() => dispatch(decreaseProductCountAction(product))}
-              className="quantity-icon-btn"
+            <div
+              onClick={handleDecrease}
+              className="btn btn-info quantity-icon-btn"
             >
               -
-            </Button>
+            </div>
 
             <span>{checkIfExist?.quantity}</span>
 
-            <Button
-              variant="info"
-              className="quantity-icon-btn"
-              onClick={() => dispatch(increaseProductCountAction(product))}
+            <div
+              className="btn btn-info quantity-icon-btn"
+              onClick={handleIncrease}
             >
               +
-            </Button>
+            </div>
           </div>
         ) : (
-          <Button
-            variant="info"
-            onClick={() => dispatch(addProductAction(product))}
+          <div
+            onClick={handleAddToCart}
             block
-            className="add-to-cart"
+            className="btn btn-info add-to-cart"
           >
             <img src={addToCart} alt="" />
             add to cart
-          </Button>
+          </div>
         )}
       </div>
     </StyledProductItem>
@@ -101,12 +109,13 @@ const styles = styled.div`
   }
   .add-to-cart {
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 11px;
+    font-weight: 600;
     display: flex;
     justify-content: space-around;
   }
   .add-to-cart img {
-    height: 18px;
+    height: 14px;
   }
   .change-quantity {
     display: flex;

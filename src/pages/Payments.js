@@ -3,7 +3,6 @@ import config from "../config/config.json";
 import superagent from "superagent";
 import DataTable from "react-data-table-component";
 import { currencyFormatter } from "../utils/curencyFormatter";
-import { Badge } from "react-bootstrap";
 import moment from "moment";
 
 const Payment = () => {
@@ -44,9 +43,9 @@ const Payment = () => {
       name: "Status",
       selector: (row, index) =>
         row.status === "succeeded" ? (
-          <Badge variant="success">Succeeded</Badge>
+          <div className="bg-success">Succeeded</div>
         ) : (
-          <Badge variant="danger">Failed</Badge>
+          <div className="bg-danger">Failed</div>
         ),
       sortable: true,
     },
@@ -65,14 +64,16 @@ const Payment = () => {
   ];
 
   return (
-    <DataTable
-      title="Payment List (test payments)"
-      columns={columns}
-      data={payments}
-      progressPending={loading}
-      pagination
-      key="index"
-    />
+    <div className="container">
+      <DataTable
+        title="Payment List (test payments)"
+        columns={columns}
+        data={payments}
+        progressPending={loading}
+        pagination
+        key="index"
+      />
+    </div>
   );
 };
 export default Payment;

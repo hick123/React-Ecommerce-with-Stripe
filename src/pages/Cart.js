@@ -4,8 +4,6 @@ import {
   removeProductAction,
   updateTotalAction,
 } from "../store/cart/cart.action";
-import { Row, Col } from "react-bootstrap";
-import { Button } from "react-bootstrap";
 import styled from "styled-components";
 import {
   decreaseProductCountAction,
@@ -39,18 +37,17 @@ export default function Cart() {
           </div>
           <h3>Your cart is empty</h3>
 
-          <Button
-            variant="info"
-            className="checkout-btn"
+          <div
+            className="btn btn-info checkout-btn"
             onClick={() => history.push("/shop")}
           >
             Shop
-          </Button>
+          </div>
         </div>
       )}
       {cart_items.length > 0 && (
-        <Row>
-          <Col md={8}>
+        <div className="row">
+          <div className="col-sm-12  col-md-8">
             <div className="table-cart">
               <table>
                 <thead>
@@ -81,29 +78,28 @@ export default function Cart() {
 
                       <td className="product-count">
                         <div className="change-quantity">
-                          <Button
-                            variant="info"
+                          <div
+                            className="btn btn-info quantity-icon-btn"
                             onClick={() =>
                               dispatch(decreaseProductCountAction(cart_item))
                             }
                             className="quantity-icon-btn"
                           >
                             -
-                          </Button>
+                          </div>
 
                           <span className="product-qty">
                             {cart_item.quantity}
                           </span>
 
-                          <Button
-                            variant="info"
-                            className="quantity-icon-btn"
+                          <div
+                            className="btn btn-info quantity-icon-btn"
                             onClick={() =>
                               dispatch(increaseProductCountAction(cart_item))
                             }
                           >
                             +
-                          </Button>
+                          </div>
                         </div>
                       </td>
                       <td>
@@ -114,26 +110,25 @@ export default function Cart() {
                         </div>
                       </td>
                       <td>
-                        <Button
-                          variant="danger"
-                          className="quantity-icon-btn"
+                        <div
+                          className="btn btn-danger quantity-icon-btn"
                           onClick={() =>
                             dispatch(removeProductAction(cart_item))
                           }
                         >
                           x
-                        </Button>
+                        </div>
                       </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-          </Col>
-          <Col md={4}>
+          </div>
+          <div className="col-sm-12 col-md-4">
             <CartSummary />
-          </Col>
-        </Row>
+          </div>
+        </div>
       )}
     </CartWrapper>
   );

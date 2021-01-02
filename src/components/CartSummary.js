@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
-import { Button } from "react-bootstrap";
 // import stripeIcon from "../assets/stripe.svg";
 import { useHistory } from "react-router-dom";
 import { currencyFormatter } from "../utils/curencyFormatter";
@@ -35,14 +34,14 @@ export default function CartSummary() {
         <span className="amount">{currencyFormatter.format(total.amount)}</span>
       </div>
 
-      <Button
-        variant="info"
-        block
-        className="checkout-btn"
-        onClick={() => history.push("/checkout")}
-      >
-        Checkout{" "}
-      </Button>
+      <div class="d-grid gap-2">
+        <div
+          className="btn btn-info checkout-btn"
+          onClick={() => history.push("/checkout")}
+        >
+          Checkout
+        </div>
+      </div>
     </CartSummaryWrapper>
   );
 }

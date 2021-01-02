@@ -1,7 +1,6 @@
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { useHistory } from "react-router-dom";
-import { Button } from "react-bootstrap";
 import styled from "styled-components";
 
 export default function SuccessPayment({ metadata }) {
@@ -14,13 +13,12 @@ export default function SuccessPayment({ metadata }) {
 
       <p>Payment completed successfully</p>
 
-      <Button
-        variant="info"
-        className="shop-btn"
+      <div
+        className="btn btn-info shop-btn"
         onClick={() => history.push("/shop")}
       >
         Shop
-      </Button>
+      </div>
     </StyledSuccessPayment>
   );
 }

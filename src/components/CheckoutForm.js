@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import styled from "styled-components";
 import { useSelector, useDispatch } from "react-redux";
-
-import { Button, Alert } from "react-bootstrap";
 import SuccessPayment from "./SuccessPayment";
 import { currencyFormatter } from "../utils/curencyFormatter";
 import superagent from "superagent";
@@ -100,29 +98,32 @@ export default function CheckoutForm() {
 
     return (
       <StyledRenderForm>
-        <Alert variant="success">
-          <Alert.Heading>For demo purposes</Alert.Heading>
+        <div className="alert alert-success" role="alert">
+          <h4 className="alert-heading">For demo purposes</h4>
           <p>
             Card: 4242 4242 4242 4242 <br /> Exp: 01/21 <br />
             CVC: 123 <br />
             ZIP: 99501
-            <hr />
+          </p>
+          <hr />
+
+          <p className="mb-0">
             Or use 3D Secure card <br /> Card: 4000 0000 0000 3220
           </p>
-        </Alert>
+        </div>
         <h4>Amount to be paid : {currencyFormatter.format(total.amount)}</h4>
         <form className="form">
           {/* <Form.Label>Name on Card</Form.Label> */}
           <input
             id="name"
             name="name"
-            placeholder="Names"
+            placeholder="Full name"
             autoComplete="cardholder"
-            className="name-input"
+            className="form-control"
           />
 
           <CardElement
-            className="card-input sr-card-element"
+            className="form-control sr-card-element"
             options={options}
             onReady={() => {
               console.log("CardElement [ready]");
@@ -137,17 +138,17 @@ export default function CheckoutForm() {
               console.log("CardElement [focus]");
             }}
           />
-
+          <hr />
           {error && <div className="message sr-field-error">{error}</div>}
-          <Button
-            variant="info"
-            block
-            className="pay-btn"
-            disabled={processing || !clientSecret || !stripe}
-            onClick={handleSubmit}
-          >
-            {processing ? "Processing…" : "Pay"}
-          </Button>
+          <div class="d-grid gap-2">
+            <div
+              className="btn btn-info checkout-btn"
+              disabled={processing || !clientSecret || !stripe}
+              onClick={handleSubmit}
+            >
+              {processing ? "Processing…" : "Pay"}
+            </div>
+          </div>
         </form>
       </StyledRenderForm>
     );
@@ -174,36 +175,13 @@ const styles = styled.div`
     background-color: #fff;
     padding: 20px;
   }
+  input {
+    margin-bottom: 10px;
+  }
   .form-row {
     margin: 0;
   }
-  /* .name-input {
-    width: 100%;
-    border-width: 1px;
-    border-color: #ccc;
-    padding: 6px;
-    border-radius: 5px 5px 0 0;
-  }
 
-  .name-input:focus {
-    width: 100%;
-    border: 1px solid #ccc;
-    padding: 6px;
-    border-radius: 5px 5px 0 0;
-  } */
-  input {
-    width: 100%;
-    border: 1px solid #ccc;
-    padding: 6px;
-    border-radius: 5px 5px 0 0;
-  }
-
-  input:focus {
-    width: 100%;
-    border: 1px solid #ccc;
-    padding: 6px;
-    border-radius: 5px 5px 0 0;
-  }
   .card-input {
     border: 1px solid #ccc;
     padding: 8px;

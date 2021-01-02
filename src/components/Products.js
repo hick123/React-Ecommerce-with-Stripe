@@ -4,7 +4,6 @@ import ProductItem from "./ProductItem";
 import superagent from "superagent";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
-import { Row, Col } from "react-bootstrap";
 import ContentLoader from "react-content-loader";
 import config from "../config/config.json";
 
@@ -37,14 +36,14 @@ export default function Products() {
     let content = [];
     for (let i = 0; i < 15; i++) {
       content.push(
-        <Col sm={6} md={3}>
+        <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <ContentLoader viewBox="0 0 500 420" height={150} width={200}>
             <rect x="16" y="17" rx="0" ry="0" width="360" height="200" />
             <circle cx="35" cy="248" r="20" />
             <rect x="69" y="229" rx="2" ry="2" width="275" height="15" />
             <rect x="69" y="253" rx="2" ry="2" width="140" height="15" />
           </ContentLoader>
-        </Col>
+        </div>
       );
     }
 
@@ -55,16 +54,19 @@ export default function Products() {
 
   return (
     <StyledProducts>
-      <div className="products">
-        <Row>
+      <div className="container">
+        <div className="row">
           {loading && placeholder()}
 
           {!loading && (
             <>
               {products.map((product) => (
-                <Col sm={6} md={3} key={product.id}>
+                <div
+                  className="col-xs-12 col-sm-6 col-md-4 col-lg-3"
+                  key={product.id}
+                >
                   <ProductItem product={product} />
-                </Col>
+                </div>
               ))}
             </>
           )}
@@ -72,7 +74,7 @@ export default function Products() {
           {!loading && products.length === 0 && (
             <div className="out-of-stock"> Out of stock</div>
           )}
-        </Row>
+        </div>
       </div>
     </StyledProducts>
   );
