@@ -2,4 +2,4 @@
 
 ### Demo
 
-The link to the demo is a [demo](https://ecommerce.isadev.co.ke)
+The link to the demo is a [demo](https://hungry-panini-0bf4bc.netlify.app)
